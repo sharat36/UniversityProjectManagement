@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient"
+    tools:context=".MainActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        android:background="@android:color/holo_orange_dark"
+        app:layout_constraintBottom_toTopOf="@+id/listViewGroups"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Grouping"
+        android:textAlignment="center"/>
+    <EditText
+        android:id="@+id/editProjectName"
+        android:layout_width="400dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="100dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black"
+        android:ems="10"
+        android:hint="Project Name"
+        android:textSize="20dp"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <EditText
+        android:id="@+id/editDeadline"
+        android:layout_width="400dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:textSize="20dp"
+        android:hint="Deadline (dd/mm/yyyy)"
+        android:inputType="textPersonName"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/editProjectName"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <EditText
+        android:id="@+id/editDesc"
+        android:layout_width="400dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:hint="Description"
+        android:inputType="textMultiLine"
+        android:textColor="@android:color/black"
+        android:textColorHighlight="@color/colorAccent"
+        android:textColorHint="@android:color/black"
+        android:textColorLink="#FC03C6"
+        android:textCursorDrawable="@color/colorPrimaryDark"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editDeadline" />
+
+
+    <Button
+        android:id="@+id/CreateProject"
+        android:layout_width="143dp"
+        android:layout_height="76dp"
+        android:layout_marginLeft="135dp"
+        android:layout_marginTop="50dp"
+        android:text="Create"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:background="@drawable/button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editDesc" />
+
+</LinearLayout>
